@@ -1,5 +1,5 @@
 {
-    "name": "shibanashiqc/no-payment-gateway-php",
+    "name": "shibanashiqc/nbo-payment-gateway-php",
     "description": "NBO Payment Gateway",
     "type": "library",
     "license": "MIT",
