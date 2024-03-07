@@ -13,7 +13,7 @@ Read up here for getting started and understanding the payment flow with NBO Uni
 -   If your project using composer, run the below command
 
 ```
-composer require shibanashiqc/no-payment-gateway-php
+composer require shibanashiqc/nbo-payment-gateway-php
 
 ```
 
