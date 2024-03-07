@@ -56,7 +56,7 @@ getPaymentRequest() on this function first parameter is amount, second parameter
 
 
 ```php
-$result = $request->getPaymentRequest(20, 'Sj', '458485747', 'shibanashiqc@gmail.com', strval(rand(100000, 999999)));
+$result = $request->getPaymentRequest(20, 'Sj', '458485747', 'user@gmail.com', strval(rand(100000, 999999)));
 echo $result->redirectUrl();
 
 ```
