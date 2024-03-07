@@ -1,0 +1,20 @@
+{
+    "name": "shibanashiqc/no-payment-gateway-php",
+    "description": "NBO Payment Gateway",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Shibanashiqc\\NboPaymentGatewayPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Shiban Ashiq",
+            "email": "shibanashiq743@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.8"
+    }
+}
