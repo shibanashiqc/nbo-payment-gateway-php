@@ -13,7 +13,7 @@ class Client
         $this->resource_key = $resource_key;
         $this->action = $action;
     }
-
+        
     /**
      * getURL
      *

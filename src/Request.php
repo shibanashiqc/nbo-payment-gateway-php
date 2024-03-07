@@ -7,7 +7,7 @@ use Shibanashiqc\NboPaymentGatewayPhp\Client;
 
 class Request
 {
-    private $client;
+    public $client;
     public $responseURL, $errorURL, $udf1text, $udf2text, $udf3text, $udf4text, $udf5text;
     public $redirect_result;
 
