@@ -13,7 +13,7 @@ class Client
         $this->resource_key = $resource_key;
         $this->action = $action;
     }
-        
+
     /**
      * getURL
      *
@@ -34,7 +34,7 @@ class Client
     {
         $this->url = $url;
     }
-        
+
     /**
      * getMerchantId
      *
@@ -44,7 +44,7 @@ class Client
     {
         return $this->merchant_id;
     }
-        
+
     /**
      * setMerchantId
      *
@@ -55,7 +55,7 @@ class Client
     {
         $this->merchant_id = $merchant_id;
     }
-             
+
     /**
      * getResourceKey
      *
@@ -65,7 +65,7 @@ class Client
     {
         return $this->resource_key;
     }
-        
+
     /**
      * setResourceKey
      *
@@ -76,30 +76,30 @@ class Client
     {
         $this->resource_key = $resource_key;
     }
-    
+
     /**
      * getAction
      *
      * @return int
      */
-    
+
     public function getAction(): int
     {
         return $this->action;
     }
-    
+
     /**
      * setAction
      *
      * @param  mixed $action
      * @return void
      */
-    
+
     public function setAction(int $action): void
     {
         $this->action = $action;
     }
-    
+
     /**
      * password
      *
@@ -109,19 +109,19 @@ class Client
     {
         return $this->password;
     }
-    
+
     /**
      * setPassword
      *
      * @param  mixed $password
      * @return void
      */
-    
+
     public function setPassword(string $password): void
     {
         $this->password = $password;
     }
-        
+
     /**
      * encryptAES
      *
@@ -130,7 +130,7 @@ class Client
      * @param  mixed $iv
      * @return string
      */
-    public function encryptAES($str, $key, $iv = 'PGKEYENCDECIVSPC') : string
+    public function encryptAES($str, $key, $iv = 'PGKEYENCDECIVSPC'): string
     {
         $ivlen = openssl_cipher_iv_length("aes-256-cbc");
         $str = $this->pkcs5Pad($str, $ivlen);
@@ -141,7 +141,7 @@ class Client
         $encrypted = urlencode($encrypted);
         return $encrypted;
     }
-    
+
     /**
      * pkcs5Pad
      *
@@ -149,24 +149,24 @@ class Client
      * @param  mixed $blocksize
      * @return mixed
      */
-    public function pkcs5Pad($text, $blocksize) : string
+    public function pkcs5Pad($text, $blocksize): string
     {
         $pad = $blocksize - (strlen($text) % $blocksize);
         return $text . str_repeat(chr($pad), $pad);
     }
 
-    
+
     /**
      * byteArray2Hex
      *
      * @param  mixed $byte_array
      * @return mixed
      */
-    public function byteArray2Hex($byte_array) : string
+    public function byteArray2Hex($byte_array): string
     {
         $chars = array_map("chr", $byte_array);
         $bin = join($chars);
         return bin2hex($bin);
     }
- 
+
 }
