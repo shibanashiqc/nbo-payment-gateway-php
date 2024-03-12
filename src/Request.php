@@ -205,7 +205,7 @@ class Request
                 "Token_Flag" => "1",
                 "billingInfo" => [
                     "firstName" => $name,
-                    "lastName" => "",
+                    "lastName" => $name,
                     "country" => "Oman",
                     "phoneNumber" => $phoneNumber,
                     "address" => "NBO, Sultan Qaboos St",
